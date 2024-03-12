@@ -63,7 +63,7 @@ function App() {
       <div className="w-100">
         <Header />
         <div className="input-area my-5">
-          <div className="w-100 d-flex">
+          <div className="w-100 d-flex ">
             <div className="d-flex w-100 flex-column">
               <input
                 type="text"
@@ -91,19 +91,7 @@ function App() {
                   border: "1px solid #FF8303",
                   background: "#242320",
                 }}
-              ></textarea>
-              {/* <input
-                type="text"
-                placeholder="Description..."
-                value={desc}
-                className="p-1 text-white m-1 th-16 th-br-4"
-                onChange={(e) => setDesc(e.target.value)}
-                style={{
-                  flex: 1,
-                  border: "1px solid #FF8303",
-                  background: "#242320",
-                }}
-              /> */}
+              />
             </div>
             <button
               className="primary-border"
@@ -123,22 +111,21 @@ function App() {
         </div>
         <div className="w-100 d-flex align-items-center justify-content-center">
           <div
-            className="w-75 row primary-border"
+            className=" row primary-border"
             style={{
-              minHeight: "200px",
+              width: "80%",
+              minHeight: "calc(100vh - 420px)",
               background: "#242320",
               // border: "5px solid red",
             }}
           >
             {items?.map((item, index) => (
               <div
-                className="item col-md-3 m-1 h-25 w-50"
+                className="item col-md-3 col-10 m-1 p-1 h-25 "
                 key={index}
                 style={{
                   backgroundColor: "#242320",
-                  padding: "20px",
                   borderRadius: "5px",
-                  marginBottom: "10px",
                   position: "relative",
                   overflow: "hidden",
                 }}
