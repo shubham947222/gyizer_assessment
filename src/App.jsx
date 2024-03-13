@@ -120,64 +120,67 @@ function App() {
             }}
           >
             {items?.map((item, index) => (
-              <div
-                className="item col-md-3 col-10 m-1 p-1 h-25 "
-                key={index}
-                style={{
-                  backgroundColor: "#242320",
-                  borderRadius: "5px",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                <div className="item-details">
-                  <div className="d-flex justify-content-between align-items-center">
-                    <h2 style={{ color: "#fff" }}>{item.title}</h2>
-                    <div className="d-flex gap-2">
-                      {showMenuIndex === index && (
-                        <div className=" ">
-                          <button
-                            className="primary-border th-br-5"
-                            onClick={() => handleEditItem(index)}
-                            style={{
-                              padding: "4px 10px ",
-                              fontSize: "16px",
-                              backgroundColor: "transparent",
-                              color: "#fff",
-                              cursor: "pointer",
-                            }}
-                          >
-                            <i className="fas fa-pen"></i>{" "}
-                          </button>
-                          <button
-                            className="primary-border th-br-5 mx-1"
-                            onClick={() => handleDeleteButtonClick(index)}
-                            style={{
-                              padding: "4px 10px ",
-                              fontSize: "16px",
-                              backgroundColor: "transparent",
-                              color: "#fff",
-                              cursor: "pointer",
-                            }}
-                          >
-                            <i className="fas fa-trash-alt"></i>{" "}
-                          </button>
+              <div className="col-md-3 col-12  p-1 ">
+                <div
+                  className="item  "
+                  key={index}
+                  style={{
+                    backgroundColor: "#242320",
+                    borderRadius: "5px",
+                    position: "relative",
+                    overflow: "hidden",
+                    height: "100px",
+                  }}
+                >
+                  <div className="item-details">
+                    <div className="d-flex justify-content-between align-items-center">
+                      <h2 style={{ color: "#fff" }}>{item.title}</h2>
+                      <div className="d-flex gap-2">
+                        {showMenuIndex === index && (
+                          <div className=" ">
+                            <button
+                              className="primary-border th-br-5"
+                              onClick={() => handleEditItem(index)}
+                              style={{
+                                padding: "4px 10px ",
+                                fontSize: "16px",
+                                backgroundColor: "transparent",
+                                color: "#fff",
+                                cursor: "pointer",
+                              }}
+                            >
+                              <i className="fas fa-pen"></i>{" "}
+                            </button>
+                            <button
+                              className="primary-border th-br-5 mx-1"
+                              onClick={() => handleDeleteButtonClick(index)}
+                              style={{
+                                padding: "4px 10px ",
+                                fontSize: "16px",
+                                backgroundColor: "transparent",
+                                color: "#fff",
+                                cursor: "pointer",
+                              }}
+                            >
+                              <i className="fas fa-trash-alt"></i>{" "}
+                            </button>
+                          </div>
+                        )}
+                        <div
+                          className="kabab-menu th-pointer"
+                          onClick={() => toggleMenu(index)}
+                          style={{
+                            cursor: "pointer",
+                            fontSize: "20px",
+                            color: "#fff",
+                          }}
+                        >
+                          &#8942;
                         </div>
-                      )}
-                      <div
-                        className="kabab-menu th-pointer"
-                        onClick={() => toggleMenu(index)}
-                        style={{
-                          cursor: "pointer",
-                          fontSize: "20px",
-                          color: "#fff",
-                        }}
-                      >
-                        &#8942;
                       </div>
                     </div>
+                    <p style={{ color: "#fff" }}>{item.desc}</p>
                   </div>
-                  <p style={{ color: "#fff" }}>{item.desc}</p>
                 </div>
               </div>
             ))}
