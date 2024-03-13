@@ -63,7 +63,7 @@ function App() {
       <div className="w-100">
         <Header />
         <div className="input-area my-5">
-          <div className="w-100 d-flex ">
+          <div className="w-100 d-flex mobile-wrap">
             <div className="d-flex w-100 flex-column">
               <input
                 type="text"
@@ -94,7 +94,7 @@ function App() {
               />
             </div>
             <button
-              className="primary-border"
+              className="primary-border plus-button"
               onClick={handleAddItem}
               style={{
                 padding: "6px 20px ",

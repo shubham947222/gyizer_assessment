@@ -16,3 +16,12 @@ body {
   background: #000000;
   /* color: #ffffff; */
 }
+
+@media screen and (max-width: 768px) {
+  .mobile-wrap {
+    flex-wrap: wrap;
+  }
+  .plus-button {
+    width: 100%;
+  }
+}
